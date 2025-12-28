@@ -1,41 +1,49 @@
 export default function Home() {
-  const links = [
-    { title: "GitHub", url: "https://github.com/nilshirovo" },
-    { title: "Twitter", url: "https://twitter.com" },
-    { title: "Discord", url: "https://discord.com" },
-    { title: "Blog", url: "/blog" },
-    { title: "Contact", url: "mailto:contact@example.com" },
-  ];
-
   return (
-    <main className="min-h-screen bg-white text-black font-sans">
-      <div className="max-w-2xl mx-auto px-4 py-16">
-        {/* Header */}
-        <div className="mb-12">
-          <h1 className="text-3xl font-bold mb-2">hitorino.me</h1>
-          <p className="text-gray-600">a minimal links page</p>
-        </div>
+    <>
+      <header>
+        <h1>不可燃烧垃圾垃圾垃圾桶</h1>
+        <p className="bio">
+          nils<br />
+        </p>
+      </header>
 
-        {/* Links Section */}
-        <div className="space-y-0 border border-black">
-          {links.map((link, index) => (
-            <a
-              key={index}
-              href={link.url}
-              target={link.url.startsWith("http") ? "_blank" : "_self"}
-              rel={link.url.startsWith("http") ? "noopener noreferrer" : ""}
-              className="block px-4 py-3 border-b border-black last:border-b-0 hover:bg-gray-100 transition-colors duration-200"
-            >
-              <span className="text-base">{link.title}</span>
-            </a>
-          ))}
-        </div>
+      <main>
+        <section>
+          <h3>Connect</h3>
+          <ul>
+            <li>
+              → <a href="https://twitter.com/nilshiro" target="_blank" rel="noopener noreferrer">Twitter (@nilshiro)</a>
+            </li>
+            <li>
+              → <a href="mailto:nilqaq@hitorino.me">Email (nilqaq@hitorino.me)</a>
+            </li>
+            <li>
+              → <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </li>
+          </ul>
+        </section>
 
-        {/* Footer */}
-        <div className="mt-12 text-sm text-gray-500">
-          <p>© 2025. All rights reserved.</p>
-        </div>
-      </div>
-    </main>
-  );
+        <hr />
+
+        <section>
+          <h3>Waifu-s</h3>
+          <ul>
+            <li>
+              <a href="https://ququq.moe/" target="_blank" rel="noopener noreferrer">药丸 (ququq.moe)</a>
+              <small>老婆</small>
+            </li>
+            <li>
+              <a href="https://dawn.moe/" target="_blank" rel="noopener noreferrer">蓝猫 (dawn.moe)</a>
+              <small>老婆</small>
+            </li>
+          </ul>
+        </section>
+      </main>
+
+      <footer>
+        <p>&copy; {new Date().getFullYear()} hitorino.me</p>
+      </footer>
+    </>
+  )
 }
