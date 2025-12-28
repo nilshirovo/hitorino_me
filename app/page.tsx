@@ -1,50 +1,39 @@
 export default function Home() {
-  const friends = [
-    {
-      name: "药丸",
-      url: "https://ququq.moe/",
-    },
-    {
-      name: "蓝猫",
-      url: "https://dawn.moe/",
-    },
-    {
-      name: "Twitter",
-      url: "https://twitter.com/nilshiro",
-    },
+  const links = [
+    { title: "GitHub", url: "https://github.com/nilshirovo" },
+    { title: "Twitter", url: "https://twitter.com" },
+    { title: "Discord", url: "https://discord.com" },
+    { title: "Blog", url: "/blog" },
+    { title: "Contact", url: "mailto:contact@example.com" },
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center p-4">
-      <div className="w-full max-w-md">
-        <div className="bg-gray-800 rounded-lg shadow-2xl p-8 border border-gray-700">
-          {/* Header */}
-          <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-white mb-2">nilshiro</h1>
-            <p className="text-gray-400 text-sm">links</p>
-          </div>
+    <main className="min-h-screen bg-white text-black font-sans">
+      <div className="max-w-2xl mx-auto px-4 py-16">
+        {/* Header */}
+        <div className="mb-12">
+          <h1 className="text-3xl font-bold mb-2">hitorino.me</h1>
+          <p className="text-gray-600">a minimal links page</p>
+        </div>
 
-          {/* Friends Links */}
-          <nav className="space-y-3">
-            {friends.map((friend) => (
-              <a
-                key={friend.name}
-                href={friend.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full px-4 py-3 bg-gray-700 hover:bg-gray-600 text-white text-center rounded-lg transition-colors duration-200 hover:text-blue-400"
-              >
-                {friend.name}
-              </a>
-            ))}
-          </nav>
+        {/* Links Section */}
+        <div className="space-y-0 border border-black">
+          {links.map((link, index) => (
+            <a
+              key={index}
+              href={link.url}
+              target={link.url.startsWith("http") ? "_blank" : "_self"}
+              rel={link.url.startsWith("http") ? "noopener noreferrer" : ""}
+              className="block px-4 py-3 border-b border-black last:border-b-0 hover:bg-gray-100 transition-colors duration-200"
+            >
+              <span className="text-base">{link.title}</span>
+            </a>
+          ))}
+        </div>
 
-          {/* Footer */}
-          <div className="mt-8 text-center">
-            <p className="text-gray-500 text-xs">
-              © 2025 nilshiro. minimalist links.
-            </p>
-          </div>
+        {/* Footer */}
+        <div className="mt-12 text-sm text-gray-500">
+          <p>© 2025. All rights reserved.</p>
         </div>
       </div>
     </main>
