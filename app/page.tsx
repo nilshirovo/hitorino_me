@@ -18,9 +18,6 @@ export default function Home() {
             <li>
               → <a href="mailto:nilqaq@hitorino.me">Email (nilqaq@hitorino.me)</a>
             </li>
-            <li>
-              → <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
-            </li>
           </ul>
         </section>
 
@@ -35,6 +32,10 @@ export default function Home() {
             </li>
             <li>
               <a href="https://dawn.moe/" target="_blank" rel="noopener noreferrer">蓝猫 (dawn.moe)</a>
+              <small>老婆</small>
+            </li>
+            <li>
+              <a href="https://noadiah.com/" target="_blank" rel="noopener noreferrer">subaru (noadiah.com)</a>
               <small>老婆</small>
             </li>
           </ul>
